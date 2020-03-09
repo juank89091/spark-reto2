@@ -36,4 +36,14 @@ class Challenge2Test  extends FunSuite with SparkSessionTestWrapper with Challen
 
     openingClosingPriceTrades(csv, List("BNR"))
   }
+
+  test("tradeTrending") {
+
+    val csv: DataFrame = spark.read
+      .format("csv")
+      .option("header", "true")
+      .load("s3a://deutsche-boerse-xetra-pds/2020-02-12/")
+
+    tradeTrending(csv)
+  }
 }

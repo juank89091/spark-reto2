@@ -3,6 +3,7 @@ package com.co.juaristi
 import java.time.LocalDate
 
 import org.apache.spark.sql.DataFrame
+import org.apache.spark.sql.expressions.Window
 
 
 trait Challenge2 {
@@ -42,9 +43,9 @@ trait Challenge2 {
       .where($"NumberOfTrades" > 50)
       .withColumn("Month", date_format($"Date", "MM-yyyy"))
       .groupBy("Mnemonic", "Currency" )
+      .pivot("Month")
       .agg(
-        avg("EndPrice"),
-        avg("EndPrice").as("otro")
+        avg("EndPrice")
       )
       .show()
     df
@@ -78,5 +79,21 @@ trait Challenge2 {
    * de esta manera determinar si el valor subió, bajó o se mantuvo.
    * Para el resultado tener en cuenta: Mnemonic, avg(EndPrice)
    */
-  def tradeTrending(df: DataFrame): DataFrame = ???
+  def tradeTrending(df: DataFrame): DataFrame = {
+    import org.apache.spark.sql.functions._
+    import df.sparkSession.implicits._
+
+    val windowSpec = Window
+    .partitionBy("Mnemonic")
+    .orderBy("Date", "Time")
+
+    df.withColumn("Behavior",
+      trend('EndPrice - lag('EndPrice, 1, 0).over(windowSpec)))
+  }
+
+  val trend = udf((difference: Double) => difference match {
+    case num if num > 0 => "sube"
+    case num if num < 0 => "baja"
+    case _ => "mantiene"
+  })
 }
