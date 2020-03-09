@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1bfd878-b58e-4d91-a2e8-a1a158e1dc43" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/scala/com/co/juaristi/Challenge2.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/com/co/juaristi/Challenge2.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/com/co/juaristi/Challenge2Test.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/com/co/juaristi/Challenge2Test.scala" afterDir="false" />
-    </list>
+    <list default="true" id="c1bfd878-b58e-4d91-a2e8-a1a158e1dc43" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,7 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../com.co.reto-uno" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="scala_project_settings_configurable.last_selected_tab_index" value="6" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.scala.settings.ScalaProjectSettingsConfigurable" />
   </component>
@@ -157,7 +154,6 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4750297510445" />
         <entry key="$PROJECT_DIR$/build.sbt" value="2697348580" />
         <entry key="$PROJECT_DIR$/project/build.properties" value="3029178416" />
         <entry key="$PROJECT_DIR$/project/plugins.sbt" value="3635407264" />
@@ -171,7 +167,6 @@
         <entry key="$PROJECT_DIR$/../../sbux/commerce/tenancy" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../../sbux/ucp-ref-arch" value="PREVIEW" />
         <entry key="$PROJECT_DIR$/../com.co.reto-uno" value="PREVIEW" />
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
       </map>
     </option>
   </component>
